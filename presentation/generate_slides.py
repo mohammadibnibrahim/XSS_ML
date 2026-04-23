@@ -211,15 +211,15 @@ def create_presentation():
 
     items = [
         "Traditional WAFs use rule-based pattern matching:",
-        "  ✗ High false-positive rates on JS-heavy pages",
-        "  ✗ Cannot detect obfuscated or zero-day payloads",
-        "  ✗ Require continuous manual signature updates",
+        "  - High false-positive rates on JS-heavy pages",
+        "  - Cannot detect obfuscated or zero-day payloads",
+        "  - Require continuous manual signature updates",
         "",
         "Machine Learning advantages:",
-        "  ✓ Learns complex, non-linear decision boundaries",
-        "  ✓ Detects novel attack variants without explicit rules",
-        "  ✓ Adapts to evolving attack patterns with retraining",
-        "  ✓ Provides probability scores for risk assessment",
+        "  + Learns complex, non-linear decision boundaries",
+        "  + Detects novel attack variants without explicit rules",
+        "  + Adapts to evolving attack patterns with retraining",
+        "  + Provides probability scores for risk assessment",
     ]
     add_bullet_list(slide, 1.0, 1.3, 11, 5.5, items, font_size=17)
 
@@ -230,12 +230,12 @@ def create_presentation():
                  font_size=30, bold=True, color=ACCENT_BLUE)
 
     items = [
-        "Likarish et al. (2009) — SVM/NB on HTTP parameters → 92% acc.",
-        "Wang et al. (2018) — CNN on character sequences → 99.2% acc.",
-        "Mokbal et al. (2019) — MLP with 42 dynamic features → 99.0% acc.",
-        "Mokbal et al. (2021) — XGBoost + IG-SBS feature selection → 99.4% acc.",
-        "Fang et al. (2018) — LSTM for sequential XSS patterns → 98.2% acc.",
-        "Zhou & Wang (2019) — RF ensemble with HTML/JS/URL → 98.8% acc.",
+        "Likarish et al. (2009) — SVM/NB on HTTP parameters -> 92% acc.",
+        "Wang et al. (2018) — CNN on character sequences -> 99.2% acc.",
+        "Mokbal et al. (2019) — MLP with 42 dynamic features -> 99.0% acc.",
+        "Mokbal et al. (2021) — XGBoost + IG-SBS feature selection -> 99.4% acc.",
+        "Fang et al. (2018) — LSTM for sequential XSS patterns -> 98.2% acc.",
+        "Zhou & Wang (2019) — RF ensemble with HTML/JS/URL -> 98.8% acc.",
         "",
         "Our contribution: Systematic comparison of RF, XGBoost, and LR",
         "  on the same 138K-sample dataset with 66 optimally selected features.",
@@ -273,9 +273,9 @@ def create_presentation():
     items = [
         "End-to-end ML pipeline:",
         "",
-        "  Raw CSV  →  Preprocessing  →  Feature Scaling",
+        "  Raw CSV  ->  Preprocessing  ->  Feature Scaling",
         "                                       ↓",
-        "  Evaluation  ←  Training (CV)  ←  Train/Val/Test Split",
+        "  Evaluation  <-  Training (CV)  <-  Train/Val/Test Split",
         "       ↓",
         "  Streamlit Demo App",
         "",
@@ -422,16 +422,16 @@ def create_presentation():
 
     items = [
         "Challenge 1: Class imbalance (72% vs 28%)",
-        "  → Used stratified splitting and F1-score evaluation",
+        "  -> Used stratified splitting and F1-score evaluation",
         "",
         "Challenge 2: High-dimensional feature space (66 features)",
-        "  → Leveraged pre-selected IG-SBS features; analysed correlations",
+        "  -> Leveraged pre-selected IG-SBS features; analysed correlations",
         "",
         "Challenge 3: Ensuring reproducibility",
-        "  → Fixed random seeds, centralised config, persisted all artefacts",
+        "  -> Fixed random seeds, centralised config, persisted all artefacts",
         "",
         "Challenge 4: Preventing data leakage",
-        "  → Scaler fitted on training set only; strict split boundaries",
+        "  -> Scaler fitted on training set only; strict split boundaries",
     ]
     add_bullet_list(slide, 1.0, 1.3, 11, 5.5, items, font_size=16)
 

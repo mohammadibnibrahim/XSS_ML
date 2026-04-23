@@ -57,7 +57,7 @@ def compute_metrics(y_true, y_pred, y_prob=None):
     Returns
     -------
     dict
-        Dictionary of metric_name → value.
+        Dictionary of metric_name -> value.
     """
     metrics = {
         "accuracy": accuracy_score(y_true, y_pred),
@@ -327,7 +327,7 @@ def generate_comparison_table(all_metrics):
     Parameters
     ----------
     all_metrics : dict
-        Mapping model_name → metrics dict.
+        Mapping model_name -> metrics dict.
 
     Returns
     -------
@@ -347,7 +347,7 @@ def evaluate_all_models(model_results, data, config):
     Parameters
     ----------
     model_results : dict
-        Mapping model_name → {'model': fitted, 'cv_results': dict}.
+        Mapping model_name -> {'model': fitted, 'cv_results': dict}.
     data : dict
         Preprocessed data.
     config : dict
@@ -356,7 +356,7 @@ def evaluate_all_models(model_results, data, config):
     Returns
     -------
     dict
-        Mapping model_name → metrics dict.
+        Mapping model_name -> metrics dict.
     """
     fig_dir = PROJECT_ROOT / config["output"]["figures_dir"]
     ensure_dir(fig_dir)

@@ -43,29 +43,29 @@ def main():
     overall_start = time.time()
 
     # ── Step 1: Load configuration ──────────────────────────────────
-    logger.info("\n▶ Step 1: Loading configuration …")
+    logger.info("\n>> Step 1: Loading configuration ...")
     config = load_config()
 
     # ── Step 2: Download & load dataset ─────────────────────────────
-    logger.info("\n▶ Step 2: Downloading and loading dataset …")
+    logger.info("\n>> Step 2: Downloading and loading dataset ...")
     filepath = download_dataset(config)
     df = load_dataset(filepath)
 
     # ── Step 3: Exploratory analysis ────────────────────────────────
-    logger.info("\n▶ Step 3: Exploring dataset …")
+    logger.info("\n>> Step 3: Exploring dataset ...")
     stats = explore_dataset(df)
 
     # ── Step 4: Preprocess & split ──────────────────────────────────
-    logger.info("\n▶ Step 4: Preprocessing and splitting data …")
+    logger.info("\n>> Step 4: Preprocessing and splitting data ...")
     data = preprocess_and_split(df, config)
     save_processed_data(data, config)
 
     # ── Step 5: Train all models ────────────────────────────────────
-    logger.info("\n▶ Step 5: Training models …")
+    logger.info("\n>> Step 5: Training models ...")
     model_results = train_all_models(data, config)
 
     # ── Step 6: Evaluate & generate figures ─────────────────────────
-    logger.info("\n▶ Step 6: Evaluating models and generating figures …")
+    logger.info("\n>> Step 6: Evaluating models and generating figures ...")
     all_metrics = evaluate_all_models(model_results, data, config)
 
     # ── Summary ─────────────────────────────────────────────────────

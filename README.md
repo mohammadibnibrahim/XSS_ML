@@ -1,4 +1,4 @@
-# 🛡️ XSS Attack Detection Using Machine Learning
+# XSS Attack Detection Using Machine Learning
 
 > **Team Blackhat** — University of East London  
 > Level 4 Primers · Dr. Wael El Sersy  

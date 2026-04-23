@@ -96,7 +96,7 @@ def get_all_models(config):
     Returns
     -------
     dict
-        Mapping of model name (str) → un-fitted estimator.
+        Mapping of model name (str) -> un-fitted estimator.
     """
     return {
         "Random Forest": build_random_forest(config),

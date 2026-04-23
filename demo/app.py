@@ -29,7 +29,7 @@ from src.utils.helpers import load_config, LABEL_MAP
 # ── Page configuration ─────────────────────────────────────────────────
 st.set_page_config(
     page_title="XSS Attack Detector — Team Blackhat",
-    page_icon="🛡️",
+    page_icon="shield",
     layout="wide",
 )
 
@@ -67,7 +67,7 @@ def load_test_data():
 
 def main():
     # ── Header ──────────────────────────────────────────────────────
-    st.title("🛡️ XSS Attack Detection System")
+    st.title("XSS Attack Detection System")
     st.markdown(
         "**Team Blackhat** — University of East London  \n"
         "Level 4 Primers · Dr. Wael El Sersy"
@@ -87,7 +87,7 @@ def main():
         return
 
     # ── Sidebar ─────────────────────────────────────────────────────
-    st.sidebar.title("⚙️ Settings")
+    st.sidebar.title("Settings")
     selected_model = st.sidebar.selectbox(
         "Select Model", list(models.keys())
     )
@@ -103,7 +103,7 @@ def main():
 
     # ── Tabs ────────────────────────────────────────────────────────
     tab1, tab2, tab3 = st.tabs([
-        "🔍 Sample Predictions", "📊 Model Performance", "🧪 Manual Input"
+        "Sample Predictions", "Model Performance", "Manual Input"
     ])
 
     # ── Tab 1: Sample Predictions ───────────────────────────────────
@@ -129,13 +129,13 @@ def main():
                 "Actual": LABEL_MAP[int(y_test[idx])],
                 "Predicted": LABEL_MAP[int(pred)],
                 "Confidence": f"{max(prob) * 100:.1f}%",
-                "Correct": "✅" if pred == y_test[idx] else "❌",
+                "Correct": "Yes" if pred == y_test[idx] else "No",
             })
 
         df = pd.DataFrame(results)
         st.dataframe(df, use_container_width=True)
 
-        correct = sum(1 for r in results if r["Correct"] == "✅")
+        correct = sum(1 for r in results if r["Correct"] == "Yes")
         st.success(f"Accuracy on these samples: {correct}/10 ({correct * 10}%)")
 
     # ── Tab 2: Model Performance ────────────────────────────────────
@@ -184,7 +184,7 @@ def main():
             val = col.number_input(feat, value=0, step=1, key=f"feat_{i}")
             input_values.append(val)
 
-        if st.button("🔍 Predict", type="primary"):
+        if st.button("Predict", type="primary"):
             sample = np.array(input_values).reshape(1, -1)
             sample_scaled = scaler.transform(sample)
 
@@ -193,9 +193,9 @@ def main():
 
             st.markdown("---")
             if pred == 1:
-                st.error(f"⚠️ **XSS ATTACK DETECTED** (Confidence: {prob[1]*100:.1f}%)")
+                st.error(f"XSS ATTACK DETECTED (Confidence: {prob[1]*100:.1f}%)")
             else:
-                st.success(f"✅ **Benign / Normal** (Confidence: {prob[0]*100:.1f}%)")
+                st.success(f"Benign / Normal (Confidence: {prob[0]*100:.1f}%)")
 
 
 if __name__ == "__main__":

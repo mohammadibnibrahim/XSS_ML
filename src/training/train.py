@@ -44,7 +44,7 @@ def train_model(model, X_train, y_train, model_name="model"):
     estimator
         The fitted model.
     """
-    logger.info(f"Training {model_name} …")
+    logger.info(f"Training {model_name} ...")
     start = time.time()
     model.fit(X_train, y_train)
     elapsed = time.time() - start
@@ -80,7 +80,7 @@ def cross_validate_model(model, X_train, y_train, config, model_name="model"):
 
     scoring = ["accuracy", "precision", "recall", "f1"]
 
-    logger.info(f"Running {n_folds}-fold CV for {model_name} …")
+    logger.info(f"Running {n_folds}-fold CV for {model_name} ...")
     start = time.time()
 
     cv = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=rs)
@@ -131,7 +131,7 @@ def save_model(model, model_name, config):
     filepath = models_dir / f"{safe_name}.joblib"
 
     joblib.dump(model, filepath)
-    logger.info(f"Saved {model_name} → {filepath}")
+    logger.info(f"Saved {model_name} -> {filepath}")
 
     return filepath
 
@@ -150,7 +150,7 @@ def train_all_models(data, config):
     Returns
     -------
     dict
-        Mapping of model_name → {'model': fitted_model, 'cv_results': dict}.
+        Mapping of model_name -> {'model': fitted_model, 'cv_results': dict}.
     """
     models = get_all_models(config)
     results = {}

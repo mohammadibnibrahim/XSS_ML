@@ -88,7 +88,7 @@ def load_dataset(filepath):
     # The original CSV uses 'Label'; our pipeline expects 'class'
     if "Label" in df.columns and "class" not in df.columns:
         df = df.rename(columns={"Label": "class"})
-        logger.info("Renamed target column 'Label' → 'class'")
+        logger.info("Renamed target column 'Label' -> 'class'")
 
     # Ensure all columns are numeric
     for col in df.columns:
