@@ -2,7 +2,7 @@
 
 ## Project: XSS Detection Using Machine Learning
 ## Team: Blackhat
-## Module: Level 4 Primers — Dr. Wael El Sersy
+## Module: Level 4 Primers, Dr. Wael El Sersy
 ## University: University of East London (UEL)
 
 ---
