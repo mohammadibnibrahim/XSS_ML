@@ -10,30 +10,30 @@
 ### Team Members and Contributions
 
 #### Mohammad Ibrahim
-- **Role**: Lead Developer & Data Engineer
+- **Role**: Testing & Execution
 - **Contributions**:
-  - Designed and implemented the data preprocessing pipeline
-  - Built the feature engineering and analysis module
-  - Developed the Streamlit interactive demo application
-  - Set up the project repository structure and configuration
+  - Tested the ML pipeline agents and validated outputs
+  - Ran the full training and evaluation code
+  - Verified model performance and reproducibility
+  - Managed the project repository and version control
 - **Effort Distribution**: ~34%
 
 #### Omar Adel
-- **Role**: ML Engineer & Model Developer
+- **Role**: Presentation & Visuals
 - **Contributions**:
-  - Implemented and tuned all three ML models (Random Forest, XGBoost, Logistic Regression)
-  - Conducted cross-validation experiments and hyperparameter tuning
-  - Developed the training pipeline and model persistence
-  - Wrote unit tests for model components
+  - Edited and refined the presentation slides
+  - Reviewed figure quality and layout
+  - Prepared the slide content for delivery
+  - Assisted with final report formatting
 - **Effort Distribution**: ~33%
 
 #### Mohamed Ahmed
-- **Role**: Analyst & Technical Writer
+- **Role**: Recording & Documentation
 - **Contributions**:
-  - Conducted the literature review and related work analysis
-  - Developed the evaluation module and all visualisations
-  - Authored the technical report and documentation
-  - Prepared the presentation slides and demo materials
+  - Recorded the demo video showcasing the system
+  - Documented the demo walkthrough and usage instructions
+  - Reviewed the technical report for completeness
+  - Assisted with final submission packaging
 - **Effort Distribution**: ~33%
 
 ---
