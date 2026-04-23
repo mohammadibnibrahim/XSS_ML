@@ -34,14 +34,3 @@
   - Assisted with final submission packaging
 - **Effort Distribution**: ~33%
 
----
-
-### Declaration
-
-We, the undersigned, confirm that the contributions listed above are accurate and that each team member has participated actively in the project.
-
-| Name | Signature | Date |
-|------|-----------|------|
-| Mohammad Ibrahim | _________________ | _________________ |
-| Omar Adel | _________________ | _________________ |
-| Mohamed Ahmed | _________________ | _________________ |
