@@ -24,7 +24,6 @@
   - Edited and refined the presentation slides
   - Reviewed figure quality and layout
   - Prepared the slide content for delivery
-  - Assisted with final report formatting
 - **Effort Distribution**: ~33%
 
 #### Mohamed Ahmed
@@ -32,7 +31,6 @@
 - **Contributions**:
   - Recorded the demo video showcasing the system
   - Documented the demo walkthrough and usage instructions
-  - Reviewed the technical report for completeness
   - Assisted with final submission packaging
 - **Effort Distribution**: ~33%
 
