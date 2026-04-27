@@ -88,7 +88,7 @@ The demo provides:
 - Manual feature input for real-time prediction
 
 ## Demo Video
-It's available on youtube, click [here](https://youtu.be/JWqY9Qzm2mQ)
+It's available on youtube, click [here](https://youtu.be/JWqY9Qzm2mQ).
 ## Results
 
 After training, the pipeline generates 10 publication-quality figures in `figures/`:
