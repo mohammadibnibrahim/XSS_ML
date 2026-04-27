@@ -113,6 +113,8 @@ def main():
     with tab3:
         st.subheader("Manual Feature Input")
         st.markdown(
+            "Enter feature values manually to test the model's prediction "
+            "on a custom sample."
         )
         cols = st.columns(3)
         input_values = []
