@@ -25,7 +25,7 @@ def build_logistic_regression(config):
     return model
 def get_all_models(config):
     return {
-        : build_random_forest(config),
-        : build_xgboost(config),
-        : build_logistic_regression(config),
+        "Random Forest": build_random_forest(config),
+        "XGBoost": build_xgboost(config),
+        "Logistic Regression": build_logistic_regression(config),
     }

@@ -37,6 +37,8 @@ def load_test_data():
 def main():
     st.title("XSS Attack Detection System")
     st.markdown(
+        "**Team Blackhat** -- University of East London  \n"
+        "Level 4 Primers -- Dr. Wael El Sersy"
     )
     st.markdown("---")
     try:
@@ -51,19 +53,22 @@ def main():
         return
     st.sidebar.title("Settings")
     selected_model = st.sidebar.selectbox(
-        , list(models.keys())
+        "Select Model", list(models.keys())
     )
     model = models[selected_model]
     st.sidebar.markdown("---")
     st.sidebar.markdown("### About")
     st.sidebar.info(
+        "This system uses Machine Learning to detect Cross-Site Scripting (XSS) "
+        "vulnerabilities based on URL, HTML, and JavaScript features."
     )
     tab1, tab2, tab3 = st.tabs([
-        , "Model Performance", "Manual Input"
+        "Sample Predictions", "Model Performance", "Manual Input"
     ])
     with tab1:
         st.subheader("Sample Test Predictions")
         st.markdown(
+            f"Displaying 10 random samples from the test set "
             f"using the **{selected_model}** model."
         )
         np.random.seed(123)
@@ -74,11 +79,11 @@ def main():
             pred = model.predict(sample)[0]
             prob = model.predict_proba(sample)[0] if hasattr(model, "predict_proba") else [0, 0]
             results.append({
-                : int(idx),
-                : LABEL_MAP[int(y_test[idx])],
-                : LABEL_MAP[int(pred)],
-                : f"{max(prob) * 100:.1f}%",
-                : "Yes" if pred == y_test[idx] else "No",
+                "Sample Index": int(idx),
+                "Actual": LABEL_MAP[int(y_test[idx])],
+                "Predicted": LABEL_MAP[int(pred)],
+                "Confidence": f"{max(prob) * 100:.1f}%",
+                "Correct": "Yes" if pred == y_test[idx] else "No",
             })
         df = pd.DataFrame(results)
         st.dataframe(df, use_container_width=True)

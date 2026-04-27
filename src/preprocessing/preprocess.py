@@ -77,14 +77,14 @@ def preprocess_and_split(df, config):
     X_test = scaler.transform(X_test)
     logger.info("Applied StandardScaler normalisation")
     return {
-        : X_train,
-        : X_val,
-        : X_test,
-        : y_train,
-        : y_val,
-        : y_test,
-        : feature_cols,
-        : scaler,
+        "X_train": X_train,
+        "X_val": X_val,
+        "X_test": X_test,
+        "y_train": y_train,
+        "y_val": y_val,
+        "y_test": y_test,
+        "feature_names": feature_cols,
+        "scaler": scaler,
     }
 def save_processed_data(data, config):
     out_dir = PROJECT_ROOT / config["data"]["processed_dir"]
@@ -103,16 +103,16 @@ def save_processed_data(data, config):
 def load_processed_data(config):
     d = PROJECT_ROOT / config["data"]["processed_dir"]
     return {
-        : np.load(d / "X_train.npy"),
-        : np.load(d / "X_val.npy"),
-        : np.load(d / "X_test.npy"),
-        : np.load(d / "y_train.npy"),
-        : np.load(d / "y_val.npy"),
-        : np.load(d / "y_test.npy"),
-        : pd.read_csv(
+        "X_train": np.load(d / "X_train.npy"),
+        "X_val": np.load(d / "X_val.npy"),
+        "X_test": np.load(d / "X_test.npy"),
+        "y_train": np.load(d / "y_train.npy"),
+        "y_val": np.load(d / "y_val.npy"),
+        "y_test": np.load(d / "y_test.npy"),
+        "feature_names": pd.read_csv(
             d / "feature_names.csv", header=None
         )[0].tolist(),
-        : joblib.load(d / "scaler.joblib"),
+        "scaler": joblib.load(d / "scaler.joblib"),
     }
 if __name__ == "__main__":
     config = load_config()

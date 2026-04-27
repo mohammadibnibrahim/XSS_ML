@@ -55,8 +55,8 @@ def train_all_models(data, config):
         trained = train_model(model, X_train, y_train, name)
         save_model(trained, name, config)
         results[name] = {
-            : trained,
-            : cv_results,
+            "model": trained,
+            "cv_results": cv_results,
         }
     return results
 if __name__ == "__main__":

@@ -17,18 +17,18 @@ from src.utils.helpers import (
 )
 logger = setup_logging()
 plt.rcParams.update({
-    : 150,
-    : 150,
-    : 11,
-    : 13,
-    : 11,
+    "figure.dpi": 150,
+    "savefig.dpi": 150,
+    "font.size": 11,
+    "axes.titlesize": 13,
+    "axes.labelsize": 11,
 })
 def compute_metrics(y_true, y_pred, y_prob=None):
     metrics = {
-        : accuracy_score(y_true, y_pred),
-        : precision_score(y_true, y_pred, zero_division=0),
-        : recall_score(y_true, y_pred, zero_division=0),
-        : f1_score(y_true, y_pred, zero_division=0),
+        "accuracy": accuracy_score(y_true, y_pred),
+        "precision": precision_score(y_true, y_pred, zero_division=0),
+        "recall": recall_score(y_true, y_pred, zero_division=0),
+        "f1_score": f1_score(y_true, y_pred, zero_division=0),
     }
     if y_prob is not None:
         fpr, tpr, _ = roc_curve(y_true, y_prob)

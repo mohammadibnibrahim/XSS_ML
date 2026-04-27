@@ -16,8 +16,8 @@ def compute_correlation_matrix(X, feature_names):
 def get_feature_importance(model, feature_names):
     importances = model.feature_importances_
     df = pd.DataFrame({
-        : feature_names,
-        : importances,
+        "feature": feature_names,
+        "importance": importances,
     }).sort_values("importance", ascending=False).reset_index(drop=True)
     logger.info(f"Top-5 features: {df.head(5)['feature'].tolist()}")
     return df
