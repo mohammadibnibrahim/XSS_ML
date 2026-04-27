@@ -87,8 +87,6 @@ The demo provides:
 - Model performance metrics and visualisations
 - Manual feature input for real-time prediction
 
-## Demo Video
-It's available on youtube, click [here](https://youtu.be/JWqY9Qzm2mQ).
 ## Results
 
 After training, the pipeline generates 10 publication-quality figures in `figures/`:
@@ -106,6 +104,31 @@ After training, the pipeline generates 10 publication-quality figures in `figure
 11. Feature group importance analysis
 
 A detailed comparison table is saved to `figures/model_comparison_table.csv`.
+
+## Demo Video
+
+The demo video is available on YouTube: [Watch here](https://youtu.be/JWqY9Qzm2mQ).
+
+## Running with Docker
+
+If you have Docker installed, you can run the entire project (pipeline + demo) without installing Python dependencies locally.
+
+### 1. Build the Image
+
+```bash
+docker build -t xss-detector .
+```
+
+This will automatically download the dataset, train the models, and generate the figures inside the container.
+
+### 2. Run the Container
+
+```bash
+docker run -p 8501:8501 xss-detector
+```
+
+Once running, access the demo at [http://localhost:8501](http://localhost:8501).
+
 
 ## Technologies Used
 
