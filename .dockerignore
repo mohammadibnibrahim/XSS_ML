@@ -1,0 +1,10 @@
+.git
+__pycache__
+*.pyc
+.pytest_cache
+.coverage
+venv
+env
+Listoncyber.pdf
+.DS_Store
+Thumbs.db
